@@ -87,7 +87,7 @@
 ### demo
 #### 单个视频test:  
 不想训练模型，只是运行模型看看效果的话，可以运行test.py文件。
-- 将编码方式: wordans_to_index.json , embed_matrix.h5，模型下载放入对应文件。
+- 将编码方式: wordans_to_index.json , embed_matrix.h5，模型，预训练模型下载放入对应文件。[链接](https://pan.baidu.com/s/1Srtzp5hGi_xbR5DzimLt3A)
 - 命令：python test.py main --model_path='attmfl\_res/models/1'  --video= 'test/1.mp4' 
 - 需要把模型下载到attmfl_res/models/1目录下面。视频放在test文件，当然也可以通过上面的命令自己指定路径
 - 注：我在提交文件的时候，实际上使用了30个不同的模型分别预测，然后将预测的概率取平均的，结果大概高3个百分点（使用TTA可能效果更佳）。这里为了简便只使用一个模型。
@@ -109,6 +109,17 @@
 usage:
 1. 运行attmfl\_res/predict_prob.py，用训练的30个模型分别预测test概率  
 2. 运行merge_prob.py，融合预测的概率。并生成预测文件。
+ 
+ 运行结果：
+ 
+  <div align=center> <img src="./2018-12-18 21-35-35屏幕截图.png" width = "600" height = "500" alt="a截取图片" title='input image'  > </div>
+- 输入question:	what is in the video
+- answer:	 television
+- 输入question:	where is the person in the video
+- answer:	 indoor
+- question:	what color clothes does the person wear in the video
+- answer:	 grey
+
 
 -----
 ### 文件预处理说明
