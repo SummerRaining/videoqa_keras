@@ -92,6 +92,16 @@
 - 需要把模型下载到attmfl_res/models/1目录下面。视频放在test文件，当然也可以通过上面的命令自己指定路径
 - 注：我在提交文件的时候，实际上使用了30个不同的模型分别预测，然后将预测的概率取平均的，结果大概高3个百分点（使用TTA可能效果更佳）。这里为了简便只使用一个模型。
 
+ 运行结果：
+ 
+  <div align=center> <img src="example.png" width = "600" height = "500" alt="a截取图片" title='input image'  > </div>  
+- 输入question:	what is in the video  
+- answer:	 television  
+- 输入question:	where is the person in the video  
+- answer:	 indoor  
+- question:	what color clothes does the person wear in the video  
+- answer:	 grey  
+
 ### train:
 使用自己的视频和对应问题来训练模型：
 1. 将train.txt和test.txt，视频，下载的glove词向量放在data文件夹下。[glove地址](http://nlp.stanford.edu/data/glove.6B.zip)
@@ -110,16 +120,6 @@ usage:
 1. 运行attmfl\_res/predict_prob.py，用训练的30个模型分别预测test概率  
 2. 运行merge_prob.py，融合预测的概率。并生成预测文件。
  
- 运行结果：
- 
-  <div align=center> <img src="example.png" width = "600" height = "500" alt="a截取图片" title='input image'  > </div>
-- 输入question:	what is in the video
-- answer:	 television
-- 输入question:	where is the person in the video
-- answer:	 indoor
-- question:	what color clothes does the person wear in the video
-- answer:	 grey
-
 
 -----
 ### 文件预处理说明
