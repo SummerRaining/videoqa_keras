@@ -1,6 +1,6 @@
 ### 视频问答，video qa using keras。天池江之杯视频问答大赛
 ----
-###问题描述    
+### 问题描述    
 根据给定的短视频进行内容识别和分析，并回答每一个视频对应的问题。即给定一个视频，与任意的问题，模型根据视频对问题进行回答。
 [比赛地址：https://tianchi.aliyun.com/competition/introduction.htm?spm=5176.11165320.5678.1.538b325ckj6OVi&raceId=231676 ](https://tianchi.aliyun.com/competition/introduction.htm?spm=5176.11165320.5678.1.538b325ckj6OVi&raceId=231676)
 
@@ -23,7 +23,7 @@
 5.  损失：由于这是多标签问题，使用sigmoid激活函数而不是softmax，避免标签类竞争(softmax相加等于1)。$loss = -y*log(y\_pred) - (1-y)*log(1-y\_pred)$
 
 -------------------
-###模型改进residual block
+### 模型改进residual block
 原有的模型使用attention的方法是在多张图片中挑选一张最符合答案的图片，但是依然是使用一张图片回答问题，无法获得视频的动作特征。
 我在这里尝试添加新的模型结构，以获取动作信息。
 1. 对代表30张图片的30×2048的特征矩阵，在30这个方向做一维的卷积，filter size = 3。这样就相当与大小为3的窗口在30个特征上滑动，每次滑动都产生一个特征。由于结合了相邻的三张图片的信息，得到的特征可以反应动作信息。
