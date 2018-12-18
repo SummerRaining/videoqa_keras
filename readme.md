@@ -112,7 +112,7 @@ usage:
  
  运行结果：
  
-  <div align=center> <img src="./2018-12-18 21-35-35屏幕截图.png" width = "600" height = "500" alt="a截取图片" title='input image'  > </div>
+  <div align=center> <img src="example.png" width = "600" height = "500" alt="a截取图片" title='input image'  > </div>
 - 输入question:	what is in the video
 - answer:	 television
 - 输入question:	where is the person in the video
