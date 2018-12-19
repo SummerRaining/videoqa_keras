@@ -4,6 +4,9 @@
 根据给定的短视频进行内容识别和分析，并回答每一个视频对应的问题。即给定一个视频，与任意的问题，模型根据视频对问题进行回答。
 [比赛地址：https://tianchi.aliyun.com/competition/introduction.htm?spm=5176.11165320.5678.1.538b325ckj6OVi&raceId=231676 ](https://tianchi.aliyun.com/competition/introduction.htm?spm=5176.11165320.5678.1.538b325ckj6OVi&raceId=231676)
 
+### 成绩
+复赛第16名
+<div align=center><img  src="result.jpg"/></div>  
 ----   
 ### 模型思路： 
 - 总体思路：
